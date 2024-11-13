@@ -36,18 +36,12 @@ A comprehensive finance tracking application designed to help users manage their
 - **Bootstrap**: Provides a responsive design with pre-built components, ensuring consistency across devices.
 
 ### Backend
-- **Node.js**: JavaScript runtime for server-side operations, offering a non-blocking, event-driven environment.
-- **Express.js**: Framework for managing server routes and creating RESTful API endpoints for functionality like expense tracking and budgeting.
-- **JWT (JSON Web Tokens)**: Ensures secure user authentication, protecting data integrity.
+- **Node.js**
+- **JWT (JSON Web Tokens)**
+- **Firebase**
 
-## Tools
+ 
 
-- **Jira**: Manages project tasks, phases, and progress, facilitating agile development.
-- **Visual Studio Code (VS Code)**: Primary development environment, enhanced with extensions for streamlined coding.
+ 
 
-## Setup Instructions
-
-1. **Clone the Repository**
-   ```bash
-   git clone <repository-url>
-   cd finance-assistance-tracker
+ 
