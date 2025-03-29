@@ -14,14 +14,16 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 
 // Firebase configuration
 const firebaseConfig = {
-  apiKey: "enter-apikey",
-  authDomain: "enter-authDomain",
-  projectId: "enter-projectId",
-  storageBucket: "enter-storageBucket",
-  messagingSenderId: "enter-messagingSenderId",
-  appId: "enter-appId",
-  measurementId: "enter-measurementId"
+  apiKey: "AIzaSyBrJ7IhI2YaL1sEnZQkczUWm97Fg0AUFmo",
+  authDomain: "budget-tracker-62738.firebaseapp.com",
+  databaseURL: "https://budget-tracker-62738-default-rtdb.firebaseio.com",
+  projectId: "budget-tracker-62738",
+  storageBucket: "budget-tracker-62738.firebasestorage.app",
+  messagingSenderId: "697184687551",
+  appId: "1:697184687551:web:2aea06ade78421a07f3d0a",
+  measurementId: "G-8QN55S28FM"
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

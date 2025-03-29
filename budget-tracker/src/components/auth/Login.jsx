@@ -8,6 +8,7 @@ export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false); // New state for password visibility
   const { login, googleSignIn } = useAuth();
   const navigate = useNavigate();
 
@@ -38,6 +39,10 @@ export default function Login() {
     }
   }
 
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
   return (
     <Container className="d-flex align-items-center justify-content-center" style={{ minHeight: '100vh' }}>
       <div className="w-100" style={{ maxWidth: '400px' }}>
@@ -57,13 +62,23 @@ export default function Login() {
               </Form.Group>
               <Form.Group id="password" className="mb-3">
                 <Form.Label className='text-light'>Password</Form.Label>
-                <Form.Control
-                  type="password"
-                  required
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  disabled={loading}
-                />
+                <div className="input-group">
+                  <Form.Control
+                    type={showPassword ? 'text' : 'password'} // Toggle between text and password
+                    required
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    disabled={loading}
+                  />
+                  <Button
+                    variant="outline-secondary"
+                    onClick={togglePasswordVisibility}
+                    disabled={loading}
+                    className="text-light border-light"
+                  >
+                    {showPassword ? 'Hide' : 'Show'}
+                  </Button>
+                </div>
               </Form.Group>
               <Button disabled={loading} className="w-100 mb-3" type="submit">
                 Log In

@@ -4,13 +4,12 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 
 // Initialize Firebase Admin SDK with environment variable for security
-const serviceAccount = require('Enter-url-json file');
+const serviceAccount = require('/Users/bhupanimounika/Downloads/budget-tracker-62738-firebase-adminsdk-krz1h-83e1399d64.json');
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: 'enter-your-realtime database url',
-});
+  databaseURL: "https://budget-tracker-62738-default-rtdb.firebaseio.com"});
 
 const app = express();
 const PORT = process.env.PORT || 5100;

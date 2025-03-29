@@ -8,21 +8,20 @@ import IncomeChart from './charts/IncomeChart';
 import SummaryCard from './SummaryCard';
 
 export default function Dashboard() {
-  const { currentUser } = useAuth(); // Access the current user
+  const { currentUser } = useAuth();
 
   if (!currentUser) {
-    return <p>Please log in to see your dashboard.</p>;
+    return <p className="text-light text-center">Please log in to see your dashboard.</p>;
   }
 
   return (
-    <Container fluid>
-      <h1 className="mb-4">
+    <Container fluid className="py-4">
+      <h1 className="mb-4 text-center">
         <span className="text-primary">Budget</span>
         <span className="text-info"> Tracker</span>
       </h1>
-      
-      <h2 className="mb-4">
-        Welcome to Wealth Management Solution, {currentUser.email}!
+      <h2 className="mb-5 text-light text-center">
+        Welcome to Wealth Management, {currentUser.email}!
       </h2>
 
       <Row>
